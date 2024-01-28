@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: hello-there
+    tier: backend
+  name: hello-there
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: hello-there
+    template:
+      metadata:
+        label:
+          app: hello-there
+      spec:
+        containers:
+          - image:
+              name: hello-there

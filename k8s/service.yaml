@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-there-service
+  namespace: hello-there-dev
+spec:
+  selector:
+    app: hello-there
+  ports:
+    - port: 8080
